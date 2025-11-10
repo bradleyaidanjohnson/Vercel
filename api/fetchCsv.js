@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   const CSV_URL = 'https://jemstonerecruitment-my.sharepoint.com/:x:/p/jemma/ESF_iG50PUhGvwJsrGZIF4cBHY4cZj1WZ1ieHEYRDsMxEg?e=jI4vJr&download=1';
 
   try {
@@ -20,4 +20,4 @@ module.exports = async function handler(req, res) {
     console.error('Fetch failed:', error);
     res.status(500).send('Fetch failed: ' + error.message);
   }
-};
+}
